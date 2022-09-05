@@ -6,6 +6,18 @@ import {
   porcentagemCal,
 } from "./data.js";
 
+//MENU RESPONSIVO
+const hamburguer = document.querySelector(".hamburguer");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburguer.addEventListener("click", () => {  
+    hamburguer.classList.toggle('active');
+    navMenu.classList.toggle('active'); 
+})
+
+
+//FUNÇÃO DE 
+
 function renderizaCards(cards) {
   const root = document.getElementById("root");
   root.className = "container";
@@ -17,8 +29,7 @@ const btn = document.getElementById("tudo");
 btn.addEventListener("click", function () {
   const markup = data.results.sort(orderCrescente).map((result) => {
     return montarCards(result);
-  });
-  console.log(markup);
+  }); 
   renderizaCards(markup);
 });
 
@@ -94,30 +105,22 @@ btnEspecie.addEventListener("click", function () {
   renderizaCards(markup);
 });
 
-window.addEventListener("load", function () {
-  btnEspecie.value = `Alien (${porcentagemCal(
-    filterArr(data.results, "species", "Alien").length,
-    data.results.length
-  )})`;
-});
-
-window.addEventListener("load", function () {
-  btnVivo.value = `Vivos (${porcentagemCal(
-    filterArr(data.results, "status", "Alive").length,
-    data.results.length
-  )})`;
-});
-
-window.addEventListener("load", function () {
-  btnMorto.value = `Mortos (${porcentagemCal(
-    filterArr(data.results, "status", "Dead").length,
-    data.results.length
-  )})`;
-});
-
-window.addEventListener("load", function () {
-  btnDesconhecido.value = `Desconhecidos (${porcentagemCal(
-    filterArr(data.results, "status", "unknown").length,
-    data.results.length
-  )})`;
-});
+document.querySelector("#result").innerHTML = `
+Todos (${data.results.length})
+Desconhecidos (${porcentagemCal(
+  filterArr(data.results, "status", "unknown").length,
+  data.results.length
+)})
+Vivo (${porcentagemCal(
+  filterArr(data.results, "status", "Alive").length,
+  data.results.length
+)})
+Morto (${porcentagemCal(
+  filterArr(data.results, "status", "Dead").length,
+  data.results.length
+)})
+Especie (${porcentagemCal(
+  filterArr(data.results, "species", "Alien").length,
+  data.results.length
+)})
+`;
