@@ -207,11 +207,7 @@ aside {
 }
 .texto p {
   font-size: 14px;
-<<<<<<< HEAD
-  color: rgb(12, 11, 11);
-=======
-  color: white;
->>>>>>> 79757ba21d2157c8d4833cc9524ba41e1b661f93
+  color: black;
   font-family: "Sriracha", cursive, "Titillium Web", sans-serif;
   margin-left: 20px;
 }
