@@ -94,9 +94,6 @@ btnEspecie.addEventListener("click", function () {
 });
 
 window.addEventListener("load", function () {
-<<<<<<< Updated upstream
-  btnEspecie.value = `Alien (${porcentagemCal(
-=======
   let chk = document.getElementById("menu-btn");
   let menuLinks = document.querySelectorAll(".menu li a");
   menuLinks.forEach(function (item) {
@@ -106,7 +103,6 @@ window.addEventListener("load", function () {
   });
 
   btnEspecie.textContent = `Alien (${porcentagemCal(
->>>>>>> Stashed changes
     filterArr(data.results, "species", "Alien").length,
     data.results.length
   )})`;
