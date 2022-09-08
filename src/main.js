@@ -18,7 +18,6 @@ btn.addEventListener("click", function () {
   const markup = data.results.sort(orderCrescente).map((result) => {
     return montarCards(result);
   });
-  console.log(markup);
   renderizaCards(markup);
 });
 
@@ -95,7 +94,19 @@ btnEspecie.addEventListener("click", function () {
 });
 
 window.addEventListener("load", function () {
+<<<<<<< Updated upstream
   btnEspecie.value = `Alien (${porcentagemCal(
+=======
+  let chk = document.getElementById("menu-btn");
+  let menuLinks = document.querySelectorAll(".menu li a");
+  menuLinks.forEach(function (item) {
+    item.addEventListener("click", function () {
+      chk.checked = false;
+    });
+  });
+
+  btnEspecie.textContent = `Alien (${porcentagemCal(
+>>>>>>> Stashed changes
     filterArr(data.results, "species", "Alien").length,
     data.results.length
   )})`;
