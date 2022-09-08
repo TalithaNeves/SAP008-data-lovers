@@ -18,7 +18,6 @@ btn.addEventListener("click", function () {
   const markup = data.results.sort(orderCrescente).map((result) => {
     return montarCards(result);
   });
-  console.log(markup);
   renderizaCards(markup);
 });
 
@@ -95,15 +94,10 @@ btnEspecie.addEventListener("click", function () {
 });
 
 window.addEventListener("load", function () {
-  // Get the checkbox
   let chk = document.getElementById("menu-btn");
-  // Get all menu links
   let menuLinks = document.querySelectorAll(".menu li a");
-  // Loop on links
   menuLinks.forEach(function (item) {
-    // Add event listener to each links
     item.addEventListener("click", function () {
-      // When link is clicked, uncheck the checkbox to hide menu
       chk.checked = false;
     });
   });
