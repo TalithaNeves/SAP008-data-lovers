@@ -47,6 +47,7 @@ nav {
   font-size: 5px;
   width: 25%;
   height: 7%;
+
 }
 .menu a:hover{
   color: aqua;
@@ -130,6 +131,7 @@ footer p {
   transition: 0.2s;
   cursor: pointer;
   flex-wrap: wrap;
+  
 }
 
 .menu .btn-menu:hover {
@@ -385,6 +387,7 @@ background-color: #000
   width: 23px;
   border-radius: 5px;
   margin-top: 20px;
+
 }
 
 .header .menu-icon .navicon:before,
@@ -410,7 +413,8 @@ background-color: #000
 }
 
 .header .menu-btn {
-  display: none;
+display: none;
+
 }
 
 .header .menu-btn:checked ~ .menu {
