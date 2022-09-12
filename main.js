@@ -111,7 +111,7 @@ window.addEventListener("load", function () {
     filterArr(data.results, "status", "Alive").length,
     data.results.length
   )})`;
-
+ 
   btnMorto.textContent = `Mortos (${porcentagemCal(
     filterArr(data.results, "status", "Dead").length,
     data.results.length
